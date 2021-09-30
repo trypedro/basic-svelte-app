@@ -72,7 +72,9 @@
 <button on:click="{deleteFirst}">
   Delete First
 </button>
-<button on:click="{deleteLast}">
+<button on:click="{() => { // example of inline functions in svelte with arrow => function
+  createContact = createContact.slice(0, -1)
+}}">
   Delete Last
 </button>
 
